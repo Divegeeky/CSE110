@@ -1,9 +1,9 @@
 /*********************************************************************************************************************************************************************************/
 // AUTHOR: Jason Pototsky
-// FILENAME: JavaBlank.java
-// SPECIFICATION: Template
-// FOR: CSE 110- Template for all work
-// TIME SPENT: 5 Minutes
+// FILENAME: Arrays.java
+// SPECIFICATION: Array class for Lab 8
+// FOR: CSE 110- Lab8
+// TIME SPENT: 15 Minutes
 /*********************************************************************************************************************************************************************************/
 
 /*******************************************************Region Import*************************************************************************************************************/
@@ -50,9 +50,36 @@ public class Arrays {
 		 max = array[i];
 		 }
 		 }
-		 return max; // Return the smallest element
-		 }
+		 return max; // Return the largest element
 	 }
+	 
+	 private int calcSum(){
+		 int sum =0;
+		 for (int i=0; i < count; i++){
+			 sum = sum+array[i];
+		 }
+		 return sum;
+	 }
+	 
+	 public double calcAverage(){
+		 double average = 0;
+		 int sum = this.calcSum();
+		 average = sum/count;
+		 return average;
+	 }
+	 
+	 public String toString() {
+		 String output = "[ ";
+		 for (int i = 0; i < count; i++) {
+			 output += array[i];
+			 	if (i != count - 1) {
+			 		output += ", ";
+			 	}
+		 }
+		 return output + " ]";
+	}
+	 
+	 
 /*******************************************************End Region Methods********************************************************************************************************/
 }
 /*******************************************************End Region Superclass*****************************************************************************************************/
